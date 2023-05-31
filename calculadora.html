@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Calculadora</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+
+        }
+
+        body {
+
+            background-image: radial-gradient(circle, #7bbaff, white, #7bbaff);
+
+        }
+
+
+        main {
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            background-image: radial-gradient(circle, #7bbaff, white, #7bbaff);
+            background-attachment: fixed;
+            background-size: cover;
+
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 250px;
+            height: 400px;
+            padding: 30px;
+            background-color: black;
+            border-radius: 15px;
+        }
+
+        form input {
+            padding: 10px;
+            font-weight: bold;
+            outline: none;
+            text-align: right;
+            width: 225px;
+            height: 50px;
+        }
+
+        div.options {
+            display: flex;
+            margin-top: 10px;
+            flex-wrap: wrap;
+
+        }
+
+        div.options span {
+            padding: 20px;
+            width: 20px;
+            background-color: azure;
+            border: 1px solid rgb(44, 40, 48);
+            cursor: pointer;
+            text-align: center;
+            user-select: none;
+        }
+
+        div.options span:hover {
+
+            background-color: blue;
+
+        }
+
+
+        div.options span.limpa {
+
+            background-color: red;
+            color: rgb(237, 233, 243);
+            font-weight: bold;
+            width: 20px;
+            border-radius: 5px;
+        }
+
+        div.options span.result {
+
+            width: 206px;
+
+        }
+
+        div.options span.limpa:hover {
+
+            background-color: rgb(196, 123, 123);
+        }
+
+        #h1 {
+            font-size: 120%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 7vh;
+
+
+        }
+
+        #h3 {
+            height: 10vh;
+
+        }
+
+        #caixa1 {
+
+
+            font-size: 50%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            width: 25vw;
+            margin-top: -5%;
+            display: flex;
+            border: 2px solid black;
+            border-radius: 2px 3px;
+            box-shadow: 2px 2px 5px 5px black;
+            background-image: radial-gradient(circle, #7bbaff, white, #7bbaff);
+        }
+
+        #caixa2 {
+
+            font-size: 100%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            width: 10vw;
+            height: 10%;
+            margin-top: -8%;
+            margin-left: 45%;
+            margin-bottom: 5%;
+            display: flex;
+            border: 2px solid black;
+            border-radius: 2px 3px;
+            box-shadow: 2px 2px 5px 5px black;
+        }
+
+        footer {
+            background-image: radial-gradient(circle, #7bbaff, white, #7bbaff);
+            color: black;
+            height: 50%;
+            width: 90%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            margin: auto;
+            margin-top: 2%;
+            margin-bottom: 2%;
+            border-radius: 10px;
+            border-radius: 2px 3px;
+            box-shadow: 2px 2px 5px 5px black;
+        }
+
+        header {
+            background-image: radial-gradient(circle, #7bbaff, white, #7bbaff);
+            color: black;
+            height: 25vh;
+            width: 90%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            margin-top: 14px;
+            margin-bottom: 16px;
+            margin-left: 5%;
+            border-radius: 10px;
+            border-radius: 2px 3px;
+            box-shadow: 2px 2px 5px 5px black;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="h1">Calculadora On-Line</header>
+
+    <main>
+        <form name="calculadora">
+            <input type="text" name="expressao" readonly />
+            <div class="options">
+                <span>/</span>
+                <span>7</span>
+                <span>8</span>
+                <span>9</span>
+                <span>*</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+                <span>-</span>
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>+</span>
+                <span>0</span>
+                <span>,</span>
+                <span class="limpa">CE</span>
+                <span class="result">=</span>
+
+
+            </div>
+        </form>
+    </main>
+
+    <script>
+        document.querySelectorAll('form span').forEach
+            (item => {
+                item.addEventListener('click', (e) => {
+                    addVal(item.innerHTML);
+                })
+            })
+
+        function addVal(valor) {
+            if (valor == 'CE')
+                document.calculadora.expressao.value = '';
+
+            else if (valor == '=')
+                document.calculadora.expressao.value = eval
+                    (document.calculadora.expressao.value.replaceAll(',', '.')).toString().replaceAll('.', ',');
+
+            else
+                document.calculadora.expressao.value += valor;
+        }
+    </script><br><br>
+
+    <a href="index.html" target="_blank" rel="external">
+        <strong>
+            <h3 id="caixa2">HOME</h3>
+    </a></strong>
+    </div>
+</body>
+<footer>
+    <h4>&copy; Copyright LP Entertainment</h4>
+</footer><br>
+
+</html>

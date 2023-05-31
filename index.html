@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Integração-Individual</title>
+</head>
+
+<body>
+    <!-- Cabeçalho da Portal-->
+    <header id="h1">&#8486;&nbsp;&nbsp;Primeira Lei de Ohm&nbsp;&nbsp;&#8486
+    </header>
+
+    <!-- Links de acaminhamento para as paginas do portal-->
+    <nav>
+        <a href="1tensão.html" id="caixa1">Tensão</a>
+        <a href="3corrente.html" id="caixa1">Corrente</a>
+        <a href="2resistência.html" id="caixa1">Resistência</a>
+    </nav>
+
+    <!-- Conteúdo principal do portal-->
+    <main>
+        <p>A 1° lei de Ohm permite calcularmos importantes grandezas físicas, como a tensão, corrente e a resistência
+            elétrica dos mais diversos elementos presentes em um circuito. Ela traz a relação diretamente proporcional
+            entre o produto da corrente elétrica com a resistência com a diferença de potencial.</p><br>
+        <p>Conceito da Primeira Lei de Ohm diz que CORRENTE é diretamente proporcional à TENSÃO, e inversamente
+            proporcional à RESISTÊNCIA Partindo dessas observações chegamos à seguinte fórmula: V = I x R </p><br>
+
+        <!-- Lista de conteúdo-->
+        <li>V – Difernça de Potencial (Tensão);</li>
+        <li>I – Intensidade (Corrente);</li>
+        <li>R – Oposição (Resistência);</li>
+
+
+  
+    <!-- Imagem principal com responsividade feito com media query-->
+    <img src="img/ohm.png">
+
+
+    <!-- Calculadora Java scripit-->
+    <div>
+        <a href="calculadora.html" id="caixa2">Calculadora</a>
+    </div>
+   
+
+    <!-- Cabeçalho da página-->
+    <div class="video"><hr>
+        <h1 id="caixa3">Vídeos</h1>
+
+        <div id="caixa4">
+        <!-- Vídeo inserido da pasta, baizado sem direitos autorais.-->
+        <video width="400" height="250" poster="img/lamp.jpg" controls class="video">
+            <source src="vid/lamp.mp4" type="video/mp4">
+            <source src="vid/lamp.mkv" type="video/mkv">
+            <source src="vid/lamp.ogv" type="video/ogg">
+            <source src="vid/lamp.webm" type="video/webm">
+            <p>Seu navegador não é compatível com a reprodução de mídia.</p>
+            <!--Os formatos de vídeo mais utilizados são:
+        Navegador de arquivos compativéis
+        Microsoft EDGE .mp4 .m4v;
+        Apple Safari .mp4, .m4v;
+        Google Chrome .mp4, .m4v, .webm, .ogv;
+        Mozilla Firefox .webm, .ogv;
+        Opera .webm, .ogv;
+    -->
+        </video>
+
+    </div>
+    <div id="caixa5">
+        <!-- Inserir vídeos hospedados em outros sites usamos a tag "IFRAME".Ex.: No Youtube vamos no video, selecionamos compartilhar, depois a opção incorporar, copia o iframe que vai aparecer e cola no programa.configure tamanho, tempo, title ao seu gosto-->
+
+        <iframe width="400" height="250" src="https://www.youtube.com/embed/9hs7-SbB8gA" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+
+        </div>
+    </div>
+    
+
+    <!-- Dowloads de arquivos da pasta-->
+    <div class="download"><hr>
+        <h1 id="caixa3">Download</h1>
+
+        <li>CURIOSIDADE: <a href="dwn/Simon Ohm.pdf" download="SimonOhm.pdf" type="aplication.pdf">Sobre o inventor da Lei de Ohm.pdf</a></li>
+
+    </div>
+
+
+    <!-- Audios iseridos da pagina-->
+    <div class="audio"><hr>
+        <h1 id="caixa3">Áudio</h1>
+
+
+        <li>MARCHA IMPERIAL.mp3 (Instrumental Star Wars)</li>
+        <audio preload="metadata" controls autoplay loop>
+            <source src="aud/marchaimperial.mp3" type="audio/mp3">
+            <source src="aud/marchaimperial.ogg" type="audio/ogg">
+            <source src="aud/marchaimperial.wav" type="audio/wav">
+        </audio>
+    </div>
+    <hr>
+  
+</main>
+ 
+    <!-- Rodapé da página-->
+    <footer>
+        <h3>LP Development &copy; Copyright 2023.</h3>
+    </footer>
+</body>
+
+
+</html>
